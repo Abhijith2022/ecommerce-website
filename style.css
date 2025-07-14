@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  font-family: "poppins", sans-serif;
+}
+header {
+  position: absolute; /* so it floats over the landing page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4%;
+  color: black;
+  /* background-color: rgba(255, 255, 255, 0.2); semi-transparent white */
+  backdrop-filter: blur(10px); /* optional glass effect */
+  z-index: 1000; /* ensures it appears on top */
+}
+.navMenu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+}
+nav a {
+  font-size: 2.2rem;
+  margin-left: 4rem;
+  color: rgb(255, 255, 255);
+  transition: .5s;
+}
+nav a:hover{
+    color: #ff5a5a;
+    /* transform: scale(1); */
+}
+.searchbar {
+  height: 44px;
+  border-radius: 50px;
+  border: none;
+  padding: 0 20px 0 20px;
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.2); /* translucent white */
+  color: white;
+  backdrop-filter: blur(10px); /* soft glass effect */
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.searchbar::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* soft white placeholder */
+  font-size: 1.4rem;
+}
+
+.searchbar:focus {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.navWraper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: space-between;
+}
+
+@media (max-width: 1303px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 5%;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .searchbar {
+    width: 100%;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .navWraper {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cta-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+section {
+  height: 100vh;
+  padding: 8rem 4% 5rem;
+}
+.imageLanding {
+  width: 100%;
+}
+.landingpage {
+  background-image: url(images/pexels-olly-975250.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+.textLeftarea {
+  /* width: 100%; */
+  height: 100vh;
+  border: solid;
+}
+
+.hero {
+  position: relative;
+  background-image: url("images/pexels-olly-975250.jpg"); /* or your own */
+  background-size: cover;
+  /* background-position: center; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4%;
+  color: white;
+  /* border: solid; */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: "Nunito", sans-serif;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #eee;
+}
