@@ -41,11 +41,11 @@ nav a {
   font-size: 2.2rem;
   margin-left: 4rem;
   color: rgb(255, 255, 255);
-  transition: .5s;
+  transition: 0.5s;
 }
-nav a:hover{
-    color: #ff5a5a;
-    /* transform: scale(1); */
+nav a:hover {
+  color: #ff5a5a;
+  /* transform: scale(1); */
 }
 .searchbar {
   height: 44px;
@@ -199,4 +199,92 @@ section {
 
 .cta-btn:hover {
   background-color: #eee;
+}
+.categorymain {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 4%;
+}
+.imgArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #665050;
+  width: 19%;
+  height: 50vh;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.imgAreaimg {
+  width: 90%;
+  height: 86%;
+  padding: 1%;
+  margin-top: 5%;
+  transition: filter 0.2s ease;
+}
+
+/* Hide the button initially */
+.imgButton {
+  position: absolute;
+  bottom: 250px;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 8px 16px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  z-index: 2;
+  font-family: inherit;
+}
+
+/* Show button and blur image on hover */
+.imgArea:hover .imgButton {
+  opacity: 1;
+}
+
+.imgArea:hover .imgAreaimg {
+  filter: blur(2px);
+}
+
+.imgButton:hover {
+  background: #e60023;
+  color: white;
+}
+.Label {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: white;
+  font-variant: all-petite-caps;
+}
+@media (max-width: 700px) {
+  .imgArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: solid; */
+    background: #665050;
+    width: 68%;
+    margin-bottom: 3%;
+    height: 50vh;
+    align-items: center;
+  }
+  .categorymain {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 4%;
+    width: auto;
+  }
 }
